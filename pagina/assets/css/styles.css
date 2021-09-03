@@ -1,0 +1,85 @@
+.nav-sec {
+    grid-area: navegacion;
+}
+
+.main-sec{
+    grid-area: parte_central;
+}
+
+.footer-sec {
+    grid-area: pie_pagina;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    'navegacion navegacion navegacion navegacion navegacion navegacion'
+    'parte_central parte_central parte_central parte_central parte_central parte_central'
+    'pie_pagina pie_pagina pie_pagina pie_pagina pie_pagina pie_pagina';
+    padding: 1rem;
+}
+
+.grid-container2{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 2rem;
+    background-color: chartreuse;
+    padding: 1rem;
+}
+
+.grid-container3{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 2rem;
+    background-color: #2196F3;
+    padding: 1rem;
+}
+.grid-item1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    border: 1rem solid black;
+    padding: 1rem;
+    font-size: 0.5rem;
+    text-align: center;
+}
+
+.grid-item2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    border: 1rem solid black;
+    padding: 1rem;
+    font-size: 0.5rem;
+    text-align: center;
+}
+
+.grid-item3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    border: 1rem solid black;
+    padding: 1rem;
+    font-size: 0.5rem;
+    text-align: center;
+}
+
+.grid-item4 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    border: 1rem solid black;
+    padding: 1rem;
+    font-size: 0.5rem;
+    text-align: center;
+}
+
+.grid-item5 {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    border: 1rem solid black;
+    padding: 1rem;
+    font-size: 0.5rem;
+    text-align: center;
+}
+
+.grid-container > .main-sec{
+    background-color: blue;
+}
+
