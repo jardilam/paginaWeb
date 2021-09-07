@@ -1,0 +1,8 @@
+PRUEBA DE CONTENIDO DE LA PAGINA WEB
+Hola, tutor. Buenos días. Con mi grupo tuvimos al comienzo de este ciclo una reunión muy productiva para decidir sobre nuestro proyecto y entre las ideas propuestas sobresalio una relacionada con una distribuidora online de carnes, motivada principalmente porque uno de los compañeros ha venido trabajando en un emprendimiento al respecto y conoce el negocio. Sería,por tanto, algo así como nuestro "Product Owner". Las carnes se adquiririan de proveedores confiables, se almacenarian empacadas al vacío después de ser sometidas a un proceso de enfriamiento rápido para tener un stock y mantener intactas sus características mientras son despachadas y se entregarían en el domiciio del cliente (carnicerias, supermercados, restaurantes, hoteles, hogares, etc.). El cliente haria sus pedidos online desde el sitio web y pagaría por ese mismo medio. La calidad sería óptima y la  entrega muy rápida (propuestas de valor).    
+
+Otras ideas propuestas como alternativa fueron las siguientes:
+- Un portal web de compra y venta de libros usados
+- Un portal web de talleres mecánicos y profesiones afines (mecánicos, electricistas)
+- Un supermercado online de cubrimiento zonal (barrio, localidad, sector, etc.) 
+. Una tienda online especializada en productos, servicios e información general de interes para la comunidad runner (personas que salen a correr por la ciudad).
