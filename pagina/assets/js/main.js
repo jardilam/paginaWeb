@@ -5,6 +5,7 @@ $(document).ready(function () {
             $('.navegador').addClass('menu-estatico');
         }else{
             $('.navegador').removeClass('menu-estatico');
+            $('.navegador').addClass('menu-estatico1');
         }
     });  
 });
