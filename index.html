@@ -69,10 +69,82 @@
             <li class="nav-item">
               <a class="nav-link" href="#contact">Blog</a>
             </li>
-          </ul>
+            |
+            <ul class="navbar-nav ms-auto my-2 my-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#registroModal">Reigistrarse</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar sesion</a>
+              </li>
+            </ul>
         </div>
       </div>
     </nav>
+    
+    <!-- Registro Modal -->
+    <div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="registroModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="card text-center">
+            <div class="card-header">
+              Registro
+            </div>
+            <div class="card-body">
+              <form action="" method="post">
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre Completo:</label>
+                  <input type="text" class="form-control" id="nombreForm">
+                </div>
+                <div class="mb-3">
+                  <label for="contrasena" class="form-label">Contraseña:</label>
+                  <input type="password" class="form-control" id="constrasenaForm">
+                </div>
+                <div class="mb-3">
+                  <label for="fecha" class="form-label">Fecha de naciemiento:</label>
+                  <input type="date" class="form-control" id="fechaForm">
+                </div>
+                <button type="submit" class="btn btn-secondary">Registrar</button>
+              </form>
+            </div>
+            <div class="card-footer text-muted">
+              Ingresa tus datos
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- login Modal -->
+     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="card text-center">
+            <div class="card-header">
+              Iniciar sesion
+            </div>
+            <div class="card-body">
+              <form action="" method="post">
+                <div class="mb-3">
+                  <label for="correo" class="form-label">Correo electronico:</label>
+                  <input type="email" class="form-control" id="correoForm">
+                </div>
+                <div class="mb-3">
+                  <label for="contrasenaLogin" class="form-label">Contraseña:</label>
+                  <input type="password" class="form-control" id="constrasenaLoginForm">
+                </div>
+                <button type="submit" class="btn btn-secondary">Ingresar</button>
+              </form>
+            </div>
+            <div class="card-footer text-muted">
+              Ingresa tus datos
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
     <!-- Masthead-->
     <header class="masthead">
       <div class="container px-4 px-lg-5 h-100">
@@ -98,6 +170,7 @@
         </div>
       </div>
     </header>
+    
     <!-- About-->
     <section class="page-section bg-primary" id="about">
       <div class="container px-4 px-lg-5">

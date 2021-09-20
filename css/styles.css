@@ -235,7 +235,7 @@ sup {
 }
 
 a {
-  color: #f4623a;
+  color: white;
   text-decoration: underline;
 }
 a:hover {
@@ -3936,13 +3936,13 @@ textarea.form-control-lg {
 }
 
 a .logo{
-  max-width: 10rem;
+  max-width: 5rem;
 }
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem;
-  color: #f4623a;
+  padding: 0.1rem 0.1rem;
+  color: white;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
@@ -3952,7 +3952,7 @@ a .logo{
   }
 }
 .nav-link:hover, .nav-link:focus {
-  color: #c34e2e;
+  color: #bb0000;
 }
 .nav-link.disabled {
   color: #6c757d;
@@ -4033,8 +4033,8 @@ a .logo{
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -4049,14 +4049,15 @@ a .logo{
   justify-content: space-between;
 }
 .navbar-brand {
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   text-decoration: none;
   white-space: nowrap;
 }
 .navbar-nav {
+  color: #bb0000;
   display: flex;
   flex-direction: column;
   padding-left: 0;
@@ -5096,7 +5097,7 @@ a .logo{
   color: #212529;
   text-decoration: none;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: none;
 }
 .list-group-item:first-child {
   border-top-left-radius: inherit;
@@ -5279,8 +5280,8 @@ a .logo{
 }
 
 .list-group-item-primary {
-  color: #923b23;
-  background-color: #fde0d8;
+  color: white;
+  background-color: rgba(var(--bs-blue), var(--bs-text-opacity));
 }
 .list-group-item-primary.list-group-item-action:hover, .list-group-item-primary.list-group-item-action:focus {
   color: #923b23;
@@ -7799,7 +7800,7 @@ a .logo{
 }
 
 .bg-primary {
-  --bs-bg-opacity: 1;
+  --bs-bg-opacity: 0.8;
   background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
 }
 
@@ -11329,7 +11330,7 @@ hr.divider-light {
   color: #212529;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: #6c757d;
+  color: white;
   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   font-size: 0.9rem;
@@ -11339,7 +11340,7 @@ hr.divider-light {
   color: #f4623a;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #f4623a !important;
+  color: #bb0000 !important;
 }
 @media (min-width: 992px) {
   #mainNav {
@@ -11347,17 +11348,17 @@ hr.divider-light {
     background-color: transparent;
   }
   #mainNav .navbar-brand {
-    color: rgba(255, 255, 255, 0.7);
+    color: white;
   }
   #mainNav .navbar-brand:hover {
-    color: #fff;
+    color: #bb0000;
   }
   #mainNav .navbar-nav .nav-item .nav-link {
-    color: rgba(255, 255, 255, 0.7);
+    color: white;
     padding: 0 1rem;
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #fff;
+    color: #bb0000;
   }
   #mainNav .navbar-nav .nav-item:last-child .nav-link {
     padding-right: 0;
@@ -11373,17 +11374,17 @@ hr.divider-light {
     color: #f4623a;
   }
   #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
-    color: #212529;
+    color: white;
   }
   #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
-    color: #f4623a;
+    color: #bb0000;
   }
 }
 
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/chatas/fondoCarne.png");
+  background: url("../assets/img/chatas/header2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
