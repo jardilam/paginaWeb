@@ -1,71 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
-    <title>Document</title>
-</head>
-<body>
-    <header id="cabeceraweb">
-        <h1>Este es el título de la web</h1>
-    </header>
-    <nav id="navegacionprincipal">
-        <ul>
-            <li>Inicio</li>
-            <li>Productos</li>
-            <li>Contacto</li>
-            <li>¿Quiénes Somos?</li>
-        </ul>
-    </nav>
-    <aside id="barralateral">
-        <blockquote>Primer elemento</blockquote>
-        <blockquote>Segundo elemento</blockquote>
-        <blockquote>Tercer elemento</blockquote>
-    </aside>
-    <section id="contenidoprincipal">
-        <article>
-            <header>
-                <hgroup>
-                    <h1>Título de la noticia 1</h1>
-                    <h2>Subtítulo de la noticia 1</h2>
-                </hgroup>
-            </header>
-            <figure>
-                <img src="imagenes/carne1.jpeg" alt="carne1" width="500" height="500">
-            </figure>
-            <figcaption>
-                <em>Carne</em>
-            </figcaption>
-            <p><mark>Noticia 1</mark></p>
-            <p><strong>Seguimos hablando de noticia 1</strong></p>
-            <p><small>Terminamos de hablar de la noticia 1</small></p>
-            <footer id="pieprincipal">
-                <p><cite>Comentarios de usuarios</cite></p>
-            </footer>
-        </article>
-        <article>
-            <header>
-                <hgroup>
-                    <h1>Título noticia 2</h1>
-                    <h2>Subtítulo noticia 2</h2>
-                </hgroup>
-                <time datetime="2014/01/31" pubdate>Noticia publicada el día 31/01/2014</time>
-            </header>
-            <figure>
-                <img src="imagenes/carne2.jpeg" alt="carne2" width="500" height="500">
-            </figure>
-            <figcaption>
-                <em>Carne 2</em>
-            </figcaption>
-            <p>Noticia 2</p>
-            <p>Seguimos hablando de la noticia 2</p>
-            <p>Terminamos de hablar de la noticia 2</p>
-        </article>
-    </section>
-    <footer>
-        <address>Derechos reservados</address>
-    </footer>
-</body>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./Assets/css/estilos.css">
+
+    <title>Productos</title>
+  </head>
+  <body>
+      <!-- Desarrollo Carrusel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <!-- Indicadores del carrusel -->
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+        <!-- Imágenes -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+            <!-- Primera Imagen -->
+          <img class="d-block w-100 h-100" src="./Assets/img/res.jpeg" alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Cortes de Res</h1>
+            <p>En Chata's tenemos los mejores cortes de res adecuados a tu gusto</p>
+            <button type="button" class="btn btn-primary btn-lg">¡Pide Ahora!</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+            <!-- Segunda Imagen -->
+          <img class="d-block w-100 h-100" src="./Assets/img/lomo.jpeg" alt="Second slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Cortes de Cerdo</h1>
+            <p>Nuestros cortes de cerdo tienen una inigualable presentación que hace que siempre quieras un poco más</p>
+            <button type="button" class="btn btn-primary btn-lg">¡Pide Ahora!</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+            <!-- Tercera Imágen -->
+          <img class="d-block w-100 h-100" src="./Assets/img/pollo.jpeg" alt="Third slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Pollo</h1>
+            <p>Las mejores partes de pollo y filetes que podrás encontrar en el mercado</p>
+            <button type="button" class="btn btn-primary btn-lg">¡Pide Ahora!</button>
+          </div>
+        </div>
+      </div>
+        <!-- Controles -->
+            <!-- Control "anterior" -->
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+            <!-- Control "siguiente" -->
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>
