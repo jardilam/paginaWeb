@@ -603,6 +603,13 @@ progress {
   height: auto;
 }
 
+.img-size{
+  width: 100% !important;
+	height: 14rem !important;
+	background-color: black;
+	border: 3px solid #ff9daa;
+}
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
@@ -611,6 +618,7 @@ progress {
   max-width: 100%;
   height: auto;
 }
+
 
 .figure {
   display: inline-block;
@@ -634,8 +642,8 @@ progress {
 .container-md,
 .container-sm {
   width: 100%;
-  padding-right: var(--bs-gutter-x, 0.75rem);
-  padding-left: var(--bs-gutter-x, 0.75rem);
+  /* padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem); */
   margin-right: auto;
   margin-left: auto;
 }
@@ -4333,6 +4341,10 @@ a .logo{
     overflow-y: visible;
   }
 }
+.seccion-admin{
+  font-size: 1.5rem;
+  color: white !important;
+}
 @media (min-width: 1400px) {
   .navbar-expand-xxl {
     flex-wrap: nowrap;
@@ -4560,8 +4572,13 @@ a .logo{
   margin-bottom: 0;
 }
 
+.card-link{
+  text-decoration: none;
+}
+
 .card-link + .card-link {
   margin-left: 1rem;
+  
 }
 
 .card-header {
@@ -6541,6 +6558,8 @@ a .logo{
 .sticky-top {
   position: sticky;
   top: 0;
+  right: 0;
+  left: 0;
   z-index: 1020;
 }
 
@@ -11384,7 +11403,7 @@ hr.divider-light {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background: url("../assets/img/chatas/header2.jpg");
+  background: url("../img/chatas/header2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
