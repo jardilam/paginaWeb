@@ -1,7 +1,7 @@
 <template>
   <div>
-    <!-- Contacto-->
-    <section class="page-section" id="contact">
+<!-- Contacto-->
+    <section class="page-section">
       <hr class="divider" id="contact2" />
       <h2 class="text-center mt-0">Contáctanos</h2>
       <hr class="divider" />
@@ -137,3 +137,31 @@
     </section>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+        return {
+            //Data del formulario de contacto
+            tituloContacto: "Contáctanos",
+            descripcionContacto: "¿Tienes alguna inquietud o sugerencia? ¿Necesitas más información acerca \
+            de nuestros productos y/o procesos? Envíanos un mensaje y nos pondremos en contacto contigo.",   
+            nombreContactoReq: "Nombre Completo",
+            nombreContactoInv: "Se requiere ingresar un nombre.",
+            emailContactoReq: "E-mail",
+            emailContactoInv1: "Se requiere una dirección de e-mail.",            
+            emailContactoInv2: "Dirección de e-mail inválida.",
+            telefonoContactoReq: "Teléfono",
+            telefonoContactoInv: "Se requiere ingresar un número de teléfono móvil o fijo en Colombia.",
+            mensajeContactoReq: "Mensaje",
+            mensajeContactoInv: "Se requiere ingresar un mensaje",
+            formContactoSucess: "Envío de formulario exitoso. Una confirmación ha sido enviada al correo \
+            registrado. Muy pronto le contestaremos.",
+            formContactoError: "!Error al enviar el formulario! Por favor, intente de nuevo.",
+            botonContactoEnv: "Enviar",
+            phoneContactoInfo: "Haz tus pedidos: +57 (315) 546-0477"
+            // additional properties later
+        }
+    },
+}
+</script>

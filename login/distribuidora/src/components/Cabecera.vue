@@ -34,13 +34,16 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#services2">Noticias</a>
+              <a class="nav-link" href="#containerNews">Noticias</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#blog">Blog</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">Quienes Somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact2">Contacto</a>
             </li>
             |
             <ul class="navbar-nav ms-auto my-2 my-lg-0">
