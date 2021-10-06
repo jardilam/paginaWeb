@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js",
-    "devbabel": "nodemon app.js --exec babel-node"
+    "devbabel": "nodemon app.js --exec babel-node",
+    "start": "babel-node app.js --exec"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +21,11 @@
     "mongoose": "^6.0.8",
     "mongoose-unique-validator": "^2.0.3",
     "morgan": "^1.10.0",
-    "underscore": "^1.13.1"
+    "underscore": "^1.13.1",
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4",
+    "@babel/preset-env": "^7.15.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.7",
