@@ -7,7 +7,8 @@ const app = express();
 
 
 import mogoose from 'mongoose';
-const uri = 'mongodb://localhost:27017/distribucion-carnicos';
+/* const uri = 'mongodb://localhost:27017/distribucion-carnicos'; */
+const uri = 'mongodb+srv://user_jadt:Julio9502@comienzomongo.ibuqh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const options = {useNewUrlParser:true, useUnifiedTopology:true};
 
 mogoose.connect(uri,options)

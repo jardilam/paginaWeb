@@ -31,7 +31,7 @@ router.beforeEach((to,from,next)=>{
   const rutaProtegida = to.matched.some(record=>record.meta.requireAuth);
 
   if (rutaProtegida && store.state.token == '') {
-    next({name: 'home'});
+    next({name: 'Admin'});
   }
   else{
     next()

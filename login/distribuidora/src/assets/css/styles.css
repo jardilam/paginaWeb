@@ -41,7 +41,8 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 6, 61, 240;
+  /* --bs-primary-rgb: 6, 61, 240; */
+  --bs-primary-rgb: 244, 98, 58;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -606,6 +607,13 @@ progress {
 .img-size{
   width: 100% !important;
 	height: 14rem !important;
+	background-color: black;
+	border: 3px solid #ff9daa;
+  margin: auto;
+}
+.img-product-size{
+  width: 90% !important;
+	height: 40rem !important;
 	background-color: black;
 	border: 3px solid #ff9daa;
 }
@@ -6007,6 +6015,9 @@ a .logo{
 .carousel {
   position: relative;
 }
+.carousel img {
+  margin: auto;
+}
 
 .carousel.pointer-event {
   touch-action: pan-y;
@@ -6016,6 +6027,7 @@ a .logo{
   position: relative;
   width: 100%;
   overflow: hidden;
+  text-align: center;
 }
 .carousel-inner::after {
   display: block;
@@ -6028,7 +6040,6 @@ a .logo{
   display: none;
   float: left;
   width: 100%;
-  margin-right: -100%;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   transition: transform 0.6s ease-in-out;
@@ -6092,12 +6103,13 @@ a .logo{
   justify-content: center;
   width: 15%;
   padding: 0;
-  color: #fff;
+  color: #0d6efd !important;
   text-align: center;
   background: none;
   border: 0;
-  opacity: 0.5;
-  transition: opacity 0.15s ease;
+  opacity: 0.5 !important;
+  transition: opacity 0.25s ease;
+  font-size: 3rem;
 }
 @media (prefers-reduced-motion: reduce) {
   .carousel-control-prev,
@@ -6108,10 +6120,10 @@ a .logo{
 .carousel-control-prev:hover, .carousel-control-prev:focus,
 .carousel-control-next:hover,
 .carousel-control-next:focus {
-  color: #fff;
+  color: #0d6efd !important;
   text-decoration: none;
   outline: 0;
-  opacity: 0.9;
+  opacity: 0.9 !important;
 }
 
 .carousel-control-prev {
@@ -6130,6 +6142,7 @@ a .logo{
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 100% 100%;
+  color: #0d6efd;
 }
 
 /* rtl:options: {
@@ -6141,11 +6154,11 @@ a .logo{
   } ]
 } */
 .carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230d6efd'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e") !important;
 }
 
 .carousel-control-next-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230d6efd'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
 }
 
 .carousel-indicators {
@@ -6224,7 +6237,7 @@ a .logo{
 }
 .spinner-border {
   display: inline-block;
-  width: 2rem;
+  width: 3rem;
   height: 2rem;
   vertical-align: -0.125em;
   border: 0.25em solid currentColor;
@@ -11310,7 +11323,7 @@ body {
 }
 
 .page-section {
-  padding: 8rem 0;
+  padding: 1rem 1rem;
 }
 
 .text-white-75 {
