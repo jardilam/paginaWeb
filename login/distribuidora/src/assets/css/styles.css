@@ -33,7 +33,7 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #f4623a;
+  --bs-primary: #0d6efd;
   --bs-secondary: #6c757d;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -41,8 +41,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  /* --bs-primary-rgb: 6, 61, 240; */
-  --bs-primary-rgb: 244, 98, 58;
+  --bs-primary-rgb: 6, 61, 240;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -3042,13 +3041,13 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #f4623a;
-  border-color: #f4623a;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #cf5331;
-  border-color: #c34e2e;
+  background-color: #0d6dfda9;
+  border-color: #0d6dfda9;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
@@ -3951,8 +3950,18 @@ textarea.form-control-lg {
   list-style: none;
 }
 
-a .logo{
-  max-width: 5rem;
+.logo{
+  max-width: 5rem !important;
+}
+.logo-footer{
+  max-width: 5rem !important;
+  margin: auto;
+  padding: 1rem;
+}
+.galardon-footer{
+  max-width: 7rem !important;
+  margin: auto;
+  padding: 0.2rem;
 }
 
 .nav-link {
@@ -7643,6 +7652,11 @@ a .logo{
 
 .fs-6 {
   font-size: 1rem !important;
+}
+.text-galardon{
+  font-size: 0.7rem !important;
+  padding-top: 1rem;
+  text-align: center;
 }
 
 .fst-italic {
