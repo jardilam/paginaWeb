@@ -29,6 +29,8 @@ router.post("/", async (req, res) => {
     // Generar Token
     let token = jwt.sign({data: usuarioDB,}, "secret", { expiresIn: 60 * 60 * 24 * 30 }); // Expira en 30 días
 
+    console.log(token);
+
     // Pasó las validaciones
     return res.json({
       usuarioDB,

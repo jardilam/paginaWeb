@@ -76,139 +76,151 @@
               <div class="col">
                 <div class="card mx-auto" style="width: 18rem">
                   <img
-                    src="../assets/img/carnes/res.jpg"
+                    src="../assets/img/chatas/user.jpg"
                     class="card-img-top img-thumbnail img-size"
                     alt="img-res"
                   />
                   <div class="card-body">
-                    <h5 class="card-title">Res</h5>
+                    <h5 class="card-title text-center">Producto</h5>
                     <div class="collapse" id="collapseCarne">
-                      <div class="card card-body">
-                        <form action="">
-                          <label for="nombre_producto">Nombre producto:</label>
-                          <input type="text" name="nombre_producto" />
-                          <br /><br />
-                          <label for="tipo_corte">Tipo de corte:</label>
-                          <select name="tipo_corte" id="cortes">
-                            <option value="corte1">Corte1</option>
-                            <option value="corte2">Corte2</option>
-                            <option value="corte3">Corte3</option>
-                          </select>
-                          <br /><br />
+                      <!-- Registrar Producto -->
+                      <form
+                        @submit.prevent="registrarProductos()"
+                        method="post"
+                        v-if="!editar"
+                      >
+                        <div class="mb-3">
+                          <label for="nombreProducto" class="form-label">Nombre:</label>
                           <input
-                            type="submit"
-                            value="Crear"
-                            class="btn btn-warning"
+                            type="text"
+                            class="form-control"
+                            id="nombreProducto"
+                            v-model="producto.nombre"
                           />
-                        </form>
-                      </div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="descripcionProducto" class="form-label"
+                            >Descripción:</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="descripcionProducto"
+                            v-model="producto.descripcion"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="precioProducto" class="form-label"
+                            >Precio por kilogramo:</label
+                          >
+                          <input
+                            type="number"
+                            class="form-control"
+                            id="precioProducto"
+                            v-model="producto.precio"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="TipoCarne" class="form-label"
+                            >Tipo de proteína:</label
+                          >
+                          <select name="TipoCarne" id="TipoCarne" v-model="producto.tipoCarne">
+                            <option value="Res">Res</option>
+                            <option value="Cerdo">Cerdo</option>
+                            <option value="Pollo">Pollo</option>
+                          </select>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">
+                          Registrar Producto
+                        </button>
+                      </form>
+                      <!-- Editar -->
+                      <form
+                        @submit.prevent="editarUsuario(usuarioEditar)"
+                        method="post"
+                        v-if="editar"
+                      >
+                        <div class="mb-3">
+                          <label for="nombre" class="form-label">Nombre:</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="nombreForm"
+                            v-model="usuarioEditar.nombre"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="apellido" class="form-label"
+                            >Apellido:</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="apellidoForm"
+                            v-model="usuarioEditar.apellido"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="contrasena" class="form-label"
+                            >Contraseña:</label
+                          >
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="constrasenaForm"
+                            v-model="usuarioEditar.pass"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="fecha" class="form-label"
+                            >Fecha de naciemiento:</label
+                          >
+                          <b-input-group class="mb-3">
+                            <b-form-input
+                              id="fechaNacimiento"
+                              v-model="usuarioEditar.birth_date"
+                              type="text"
+                              placeholder="YYYY-MM-DD"
+                              autocomplete="off"
+                            ></b-form-input>
+                            <b-input-group-append>
+                              <b-form-datepicker
+                                v-model="usuarioEditar.birth_date"
+                                button-only
+                                right
+                                locale="es-CO"
+                                aria-controls="fechaNacimiento"
+                                @context="onContext"
+                              ></b-form-datepicker>
+                            </b-input-group-append>
+                          </b-input-group>
+                        </div>
+                        <div class="mb-3">
+                          <label for="correo" class="form-label"
+                            >Correo electronico:</label
+                          >
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="correoForm"
+                            v-model="usuarioEditar.email"
+                          />
+                        </div>
+                        <button type="submit" class="btn btn-secondary">
+                          Editar
+                        </button>
+                      </form>
                     </div>
                   </div>
                   <div class="card-body bg-primary">
                     <p>
                       <a
-                        class="card-link"
+                        class="btn btn-primary"
                         data-bs-toggle="collapse"
                         href="#collapseCarne"
                         role="button"
                         aria-expanded="false"
                         aria-controls="collapseCarne"
-                      >
-                        Crear nuevo
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card mx-auto" style="width: 18rem">
-                  <img
-                    src="../assets/img/carnes/cerdo.jpg"
-                    class="card-img-top img-thumbnail img-size"
-                    alt="img-cerdo"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Cerdo</h5>
-                    <div class="collapse" id="collapseCerdo">
-                      <div class="card card-body">
-                        <form action="">
-                          <label for="nombre_producto">Nombre producto:</label>
-                          <input type="text" name="nombre_producto" />
-                          <br /><br />
-                          <label for="tipo_corte">Tipo de corte:</label>
-                          <select name="tipo_corte" id="cortes">
-                            <option value="corte1">Corte1</option>
-                            <option value="corte2">Corte2</option>
-                            <option value="corte3">Corte3</option>
-                          </select>
-                          <br /><br />
-                          <input
-                            type="submit"
-                            value="Crear"
-                            class="btn btn-warning"
-                          />
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-body bg-primary">
-                    <p>
-                      <a
-                        class="card-link"
-                        data-bs-toggle="collapse"
-                        href="#collapseCerdo"
-                        role="button"
-                        aria-expanded="false"
-                        aria-controls="collapseCerdo"
-                      >
-                        Crear nuevo
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card mx-auto" style="width: 18rem">
-                  <img
-                    src="../assets/img/carnes/pollo.jpg"
-                    class="card-img-top img-thumbnail img-size"
-                    alt="img-pollo"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Pollo</h5>
-                    <div class="collapse" id="collapsePollo">
-                      <div class="card card-body">
-                        <form action="">
-                          <label for="nombre_producto">Nombre producto:</label>
-                          <input type="text" name="nombre_producto" />
-                          <br /><br />
-                          <label for="tipo_corte">Tipo de corte:</label>
-                          <select name="tipo_corte" id="cortes">
-                            <option value="corte1">Corte1</option>
-                            <option value="corte2">Corte2</option>
-                            <option value="corte3">Corte3</option>
-                          </select>
-                          <br /><br />
-                          <input
-                            type="submit"
-                            value="Crear"
-                            class="btn btn-warning"
-                          />
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-body bg-primary">
-                    <p>
-                      <a
-                        class="card-link"
-                        data-bs-toggle="collapse"
-                        href="#collapsePollo"
-                        role="button"
-                        aria-expanded="false"
-                        aria-controls="collapsePollo"
                       >
                         Crear nuevo
                       </a>
@@ -743,6 +755,7 @@ export default {
       dismissSecs: 5,
       dismissCountDown: 0,
       usuarios: [],
+      productos: [],
       usuario: {
         nombre: "",
         apellido: "",
@@ -750,6 +763,12 @@ export default {
         birth_date: "",
         pass: "",
         role: "",
+      },
+      producto: {
+        nombre: "",
+        descripcion: "",
+        precio: "",
+        tipoCarne: ""
       },
       editar: false,
       usuarioEditar: {},
@@ -790,6 +809,36 @@ export default {
           this.usuario.pass = "";
           this.usuario.birth_date = "";
           this.usuario.email = "";
+
+          this.mensaje.color = "success";
+          this.mensaje.texto = "Registro exitoso";
+          this.showAlert();
+        })
+        .catch((e) => {
+          console.log(e.response);
+          if (e.response.data.error.errors.nombre.message) {
+            this.mensaje.texto = e.response.data.error.errors.name.message;
+          } else {
+            this.mensaje.texto = "Error del sistema";
+          }
+          this.mensaje.color = "danger";
+          this.showAlert();
+        });
+    },
+    registrarProductos() {
+      let config = {
+        headers: {
+          token: this.token,
+        },
+      };
+      this.axios
+        .post("/producto/nuevo-producto", this.producto, config)
+        .then((res) => {
+          this.productos.push(res.data);
+          this.producto.nombre = "";
+          this.producto.descripcion = "";
+          this.producto.precio = "";
+          this.producto.tipoCarne = "";
 
           this.mensaje.color = "success";
           this.mensaje.texto = "Registro exitoso";
