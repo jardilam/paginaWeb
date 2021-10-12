@@ -27,6 +27,7 @@ app.use(express.urlencoded({extended:true}));
 app.use('/users', require('./routes/users'));
 app.use('/login', require('./routes/login'));
 app.use('/producto', require('./routes/producto'));
+app.use('/noticia', require('./routes/noticia'));
 
 const history = require('connect-history-api-fallback');
 app.use(history());

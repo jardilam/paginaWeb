@@ -32,7 +32,7 @@
       "js/" +
       ({}[t] || t) +
       "." +
-      { "chunk-4f9b49b4": "4890aaa7" }[t] +
+      { "chunk-b73ddafa": "849c7148" }[t] +
       ".js"
     );
   }
@@ -1075,177 +1075,386 @@
       k = j.exports,
       w = function () {
         var t = this,
-          a = t.$createElement;
-        t._self._c;
-        return t._m(0);
+          a = t.$createElement,
+          e = t._self._c || a;
+        return e("div", { staticClass: "container-fluid" }, [
+          e("hr", { staticClass: "divider", attrs: { id: "product" } }),
+          e("h2", { staticClass: "text-center mt-0" }, [t._v("Productos")]),
+          e("hr", { staticClass: "divider" }),
+          e("section", { staticClass: "page-section bg-light" }, [
+            e(
+              "div",
+              {
+                staticClass: "carousel carousel-primary slide",
+                attrs: {
+                  id: "carouselExampleIndicators",
+                  "data-ride": "carousel",
+                },
+              },
+              [
+                t._m(0),
+                e("div", { staticClass: "carousel-inner" }, [
+                  e("div", { staticClass: "carousel-item active" }, [
+                    e("img", {
+                      staticClass: "img-thumbnail img-product-size",
+                      attrs: { src: s("07ca"), alt: "First slide" },
+                    }),
+                    e(
+                      "div",
+                      { staticClass: "carousel-caption d-none d-md-block" },
+                      [
+                        e("h1", [t._v("Cortes de Res")]),
+                        e("p", [
+                          t._v(
+                            " En Chata's tenemos los mejores cortes de res adecuados a tu gusto "
+                          ),
+                        ]),
+                        e(
+                          "a",
+                          {
+                            staticClass: "btn btn-primary",
+                            attrs: {
+                              type: "button",
+                              role: "button",
+                              "data-bs-toggle": "collapse",
+                              href: "#menu",
+                              "aria-expanded": "false",
+                              "aria-controls": "menu",
+                            },
+                            on: {
+                              click: function (a) {
+                                return t.imprimir("Res");
+                              },
+                            },
+                          },
+                          [t._v(" ¡Ir a los productos! ")]
+                        ),
+                      ]
+                    ),
+                  ]),
+                  e("div", { staticClass: "carousel-item" }, [
+                    e("img", {
+                      staticClass: "img-thumbnail img-product-size",
+                      attrs: { src: s("159c"), alt: "Second slide" },
+                    }),
+                    e(
+                      "div",
+                      { staticClass: "carousel-caption d-none d-md-block" },
+                      [
+                        e("h1", [t._v("Cortes de Cerdo")]),
+                        e("p", [
+                          t._v(
+                            " Nuestros cortes de cerdo tienen una inigualable presentación que hace que siempre quieras un poco más "
+                          ),
+                        ]),
+                        e(
+                          "a",
+                          {
+                            staticClass: "btn btn-primary",
+                            attrs: {
+                              type: "button",
+                              role: "button",
+                              "data-bs-toggle": "collapse",
+                              href: "#menu",
+                              "aria-expanded": "false",
+                              "aria-controls": "menu",
+                            },
+                            on: {
+                              click: function (a) {
+                                return t.imprimir("Cerdo");
+                              },
+                            },
+                          },
+                          [t._v(" ¡Ir a los productos! ")]
+                        ),
+                      ]
+                    ),
+                  ]),
+                  e("div", { staticClass: "carousel-item" }, [
+                    e("img", {
+                      staticClass: "img-thumbnail img-product-size",
+                      attrs: { src: s("9324"), alt: "Third slide" },
+                    }),
+                    e(
+                      "div",
+                      { staticClass: "carousel-caption d-none d-md-block" },
+                      [
+                        e("h1", [t._v("Pollo")]),
+                        e("p", [
+                          t._v(
+                            " Las mejores partes de pollo y filetes que podrás encontrar en el mercado "
+                          ),
+                        ]),
+                        e(
+                          "a",
+                          {
+                            staticClass: "btn btn-primary",
+                            attrs: {
+                              type: "button",
+                              role: "button",
+                              "data-bs-toggle": "collapse",
+                              href: "#menu",
+                              "aria-expanded": "false",
+                              "aria-controls": "menu",
+                            },
+                            on: {
+                              click: function (a) {
+                                return t.imprimir("Pollo");
+                              },
+                            },
+                          },
+                          [t._v(" ¡Ir a los productos! ")]
+                        ),
+                      ]
+                    ),
+                  ]),
+                ]),
+                t._m(1),
+                t._m(2),
+              ]
+            ),
+          ]),
+          e(
+            "section",
+            { staticClass: "collapse show", attrs: { id: "menu" } },
+            [
+              e("hr", { staticClass: "divider" }),
+              e("div", { staticClass: "container-fluid" }, [
+                e("div", { staticClass: "row" }, [
+                  e("div", { staticClass: "col-4" }),
+                  e("div", { staticClass: "col-4 text-center" }, [
+                    e("div", { staticClass: "row" }, [
+                      e("div", { staticClass: "col p-1" }, [
+                        e(
+                          "a",
+                          {
+                            staticClass: "btn btn-danger",
+                            attrs: { type: "button", href: "#menu" },
+                            on: {
+                              click: function (a) {
+                                return t.imprimir("Pollo");
+                              },
+                            },
+                          },
+                          [t._v(" Pollo ")]
+                        ),
+                      ]),
+                      e("div", { staticClass: "col p-1" }, [
+                        e(
+                          "a",
+                          {
+                            staticClass: "btn btn-danger",
+                            attrs: { type: "button", href: "#menu" },
+                            on: {
+                              click: function (a) {
+                                return t.imprimir("Res");
+                              },
+                            },
+                          },
+                          [t._v(" Res ")]
+                        ),
+                      ]),
+                      e("div", { staticClass: "col p-1" }, [
+                        e(
+                          "a",
+                          {
+                            staticClass: "btn btn-danger",
+                            attrs: { type: "button", href: "#menu" },
+                            on: {
+                              click: function (a) {
+                                return t.imprimir("Cerdo");
+                              },
+                            },
+                          },
+                          [t._v(" Cerdo ")]
+                        ),
+                      ]),
+                    ]),
+                  ]),
+                  e("div", { staticClass: "col-4" }),
+                ]),
+                e(
+                  "div",
+                  { staticClass: "row justify-content-center" },
+                  t._l(t.productos.slice(0, 6), function (a, i) {
+                    return e("div", { key: i, staticClass: "col-sm-6" }, [
+                      a.tipoCarne == t.tipoCarne
+                        ? e("div", [
+                            e(
+                              "div",
+                              {
+                                staticClass:
+                                  "card text-white bg-dark border-danger m-1 text-center",
+                              },
+                              [
+                                e("div", { staticClass: "card-header" }, [
+                                  "Pollo" == a.tipoCarne
+                                    ? e("div", [
+                                        e("img", {
+                                          staticClass:
+                                            "card-img-top img-thumbnail img-size-product",
+                                          attrs: {
+                                            src: s("f357"),
+                                            alt: "Pollo",
+                                          },
+                                        }),
+                                      ])
+                                    : "Res" == a.tipoCarne
+                                    ? e("div", [
+                                        e("img", {
+                                          staticClass:
+                                            "card-img-top img-thumbnail img-size-product",
+                                          attrs: { src: s("ad06"), alt: "Res" },
+                                        }),
+                                      ])
+                                    : "Cerdo" == a.tipoCarne
+                                    ? e("div", [
+                                        e("img", {
+                                          staticClass:
+                                            "card-img-top img-thumbnail img-size-product",
+                                          attrs: {
+                                            src: s("8672"),
+                                            alt: "Cerdo",
+                                          },
+                                        }),
+                                      ])
+                                    : t._e(),
+                                ]),
+                                e("div", { staticClass: "card-body" }, [
+                                  e("h5", { staticClass: "card-title" }, [
+                                    t._v(t._s(a.nombre)),
+                                  ]),
+                                  e("p", { staticClass: "card-text" }, [
+                                    t._v(t._s(a.descripcion)),
+                                  ]),
+                                ]),
+                                e("div", { staticClass: "card-footer" }, [
+                                  t._v("Valor por Kg - $" + t._s(a.precio)),
+                                ]),
+                              ]
+                            ),
+                          ])
+                        : t._e(),
+                    ]);
+                  }),
+                  0
+                ),
+              ]),
+            ]
+          ),
+        ]);
       },
       E = [
         function () {
           var t = this,
             a = t.$createElement,
-            e = t._self._c || a;
-          return e("div", { staticClass: "container-fluid" }, [
-            e("hr", { staticClass: "divider", attrs: { id: "product" } }),
-            e("h2", { staticClass: "text-center mt-0" }, [t._v("Productos")]),
-            e("hr", { staticClass: "divider" }),
-            e("section", { staticClass: "page-section bg-light" }, [
-              e(
-                "div",
-                {
-                  staticClass: "carousel carousel-primary slide",
-                  attrs: {
-                    id: "carouselExampleIndicators",
-                    "data-ride": "carousel",
-                  },
-                },
-                [
-                  e("ol", { staticClass: "carousel-indicators" }, [
-                    e("li", {
-                      staticClass: "active",
-                      attrs: {
-                        "data-target": "#carouselExampleIndicators",
-                        "data-slide-to": "0",
-                      },
-                    }),
-                    e("li", {
-                      attrs: {
-                        "data-target": "#carouselExampleIndicators",
-                        "data-slide-to": "1",
-                      },
-                    }),
-                    e("li", {
-                      attrs: {
-                        "data-target": "#carouselExampleIndicators",
-                        "data-slide-to": "2",
-                      },
-                    }),
-                  ]),
-                  e("div", { staticClass: "carousel-inner" }, [
-                    e("div", { staticClass: "carousel-item active" }, [
-                      e("img", {
-                        staticClass: "img-thumbnail img-product-size",
-                        attrs: { src: s("07ca"), alt: "First slide" },
-                      }),
-                      e(
-                        "div",
-                        { staticClass: "carousel-caption d-none d-md-block" },
-                        [
-                          e("h1", [t._v("Cortes de Res")]),
-                          e("p", [
-                            t._v(
-                              " En Chata's tenemos los mejores cortes de res adecuados a tu gusto "
-                            ),
-                          ]),
-                          e(
-                            "button",
-                            {
-                              staticClass: "btn btn-primary btn-lg",
-                              attrs: { type: "button" },
-                            },
-                            [t._v(" ¡Pide Ahora! ")]
-                          ),
-                        ]
-                      ),
-                    ]),
-                    e("div", { staticClass: "carousel-item" }, [
-                      e("img", {
-                        staticClass: "img-thumbnail img-product-size",
-                        attrs: { src: s("159c"), alt: "Second slide" },
-                      }),
-                      e(
-                        "div",
-                        { staticClass: "carousel-caption d-none d-md-block" },
-                        [
-                          e("h1", [t._v("Cortes de Cerdo")]),
-                          e("p", [
-                            t._v(
-                              " Nuestros cortes de cerdo tienen una inigualable presentación que hace que siempre quieras un poco más "
-                            ),
-                          ]),
-                          e(
-                            "button",
-                            {
-                              staticClass: "btn btn-primary btn-lg",
-                              attrs: { type: "button" },
-                            },
-                            [t._v(" ¡Pide Ahora! ")]
-                          ),
-                        ]
-                      ),
-                    ]),
-                    e("div", { staticClass: "carousel-item" }, [
-                      e("img", {
-                        staticClass: "img-thumbnail img-product-size",
-                        attrs: { src: s("9324"), alt: "Third slide" },
-                      }),
-                      e(
-                        "div",
-                        { staticClass: "carousel-caption d-none d-md-block" },
-                        [
-                          e("h1", [t._v("Pollo")]),
-                          e("p", [
-                            t._v(
-                              " Las mejores partes de pollo y filetes que podrás encontrar en el mercado "
-                            ),
-                          ]),
-                          e(
-                            "button",
-                            {
-                              staticClass: "btn btn-primary btn-lg",
-                              attrs: { type: "button" },
-                            },
-                            [t._v(" ¡Pide Ahora! ")]
-                          ),
-                        ]
-                      ),
-                    ]),
-                  ]),
-                  e(
-                    "a",
-                    {
-                      staticClass: "carousel-control-prev",
-                      attrs: {
-                        href: "#carouselExampleIndicators",
-                        role: "button",
-                        "data-slide": "prev",
-                      },
-                    },
-                    [
-                      e("span", {
-                        staticClass: "carousel-control-prev-icon",
-                        attrs: { "aria-hidden": "true" },
-                      }),
-                      e("span", {}, [t._v("Anterior")]),
-                    ]
-                  ),
-                  e(
-                    "a",
-                    {
-                      staticClass: "carousel-control-next",
-                      attrs: {
-                        href: "#carouselExampleIndicators",
-                        role: "button",
-                        "data-slide": "next",
-                      },
-                    },
-                    [
-                      e("span", {
-                        staticClass: "carousel-control-next-icon",
-                        attrs: { "aria-hidden": "true" },
-                      }),
-                      e("span", { staticClass: "sr-only" }, [t._v("Next")]),
-                    ]
-                  ),
-                ]
-              ),
-            ]),
+            s = t._self._c || a;
+          return s("ol", { staticClass: "carousel-indicators" }, [
+            s("li", {
+              staticClass: "active",
+              attrs: {
+                "data-target": "#carouselExampleIndicators",
+                "data-slide-to": "0",
+              },
+            }),
+            s("li", {
+              attrs: {
+                "data-target": "#carouselExampleIndicators",
+                "data-slide-to": "1",
+              },
+            }),
+            s("li", {
+              attrs: {
+                "data-target": "#carouselExampleIndicators",
+                "data-slide-to": "2",
+              },
+            }),
           ]);
         },
+        function () {
+          var t = this,
+            a = t.$createElement,
+            s = t._self._c || a;
+          return s(
+            "a",
+            {
+              staticClass: "carousel-control-prev",
+              attrs: {
+                href: "#carouselExampleIndicators",
+                role: "button",
+                "data-slide": "prev",
+              },
+            },
+            [
+              s("span", {
+                staticClass: "carousel-control-prev-icon",
+                attrs: { "aria-hidden": "true" },
+              }),
+              s("span", {}, [t._v("Anterior")]),
+            ]
+          );
+        },
+        function () {
+          var t = this,
+            a = t.$createElement,
+            s = t._self._c || a;
+          return s(
+            "a",
+            {
+              staticClass: "carousel-control-next",
+              attrs: {
+                href: "#carouselExampleIndicators",
+                role: "button",
+                "data-slide": "next",
+              },
+            },
+            [
+              s("span", {
+                staticClass: "carousel-control-next-icon",
+                attrs: { "aria-hidden": "true" },
+              }),
+              s("span", { staticClass: "sr-only" }, [t._v("Siguiente")]),
+            ]
+          );
+        },
       ],
-      N = {},
-      S = Object(r["a"])(N, w, E, !1, null, null, null),
-      q = S.exports,
-      $ = function () {
+      N = {
+        data: function () {
+          return {
+            tipoCarne: "",
+            productos: [],
+            producto: {
+              nombre: "",
+              descripcion: "",
+              precio: "",
+              tipoCarne: "",
+            },
+          };
+        },
+        methods: {
+          listarProductos: function () {
+            var t = this;
+            this.axios
+              .get("/producto/producto")
+              .then(function (a) {
+                console.log(a.data), (t.productos = a.data);
+              })
+              .catch(function (t) {
+                console.log(t.response);
+              });
+          },
+          imprimir: function (t) {
+            this.tipoCarne = t;
+          },
+        },
+        created: function () {
+          this.listarProductos(), this.imprimir();
+        },
+      },
+      S = N,
+      $ = Object(r["a"])(S, w, E, !1, null, null, null),
+      q = $.exports,
+      P = function () {
         var t = this,
           a = t.$createElement,
           s = t._self._c || a;
@@ -1998,9 +2207,9 @@
         },
       },
       O = D,
-      P = Object(r["a"])(O, $, A, !1, null, null, null),
-      B = P.exports,
-      R = function () {
+      B = Object(r["a"])(O, P, A, !1, null, null, null),
+      R = B.exports,
+      I = function () {
         var t = this,
           a = t.$createElement;
         t._self._c;
@@ -2236,7 +2445,7 @@
           ]);
         },
       ],
-      I = {
+      z = {
         data: function () {
           return {
             tituloContacto: "Contáctanos",
@@ -2261,16 +2470,16 @@
           };
         },
       },
-      z = I,
-      T = Object(r["a"])(z, R, F, !1, null, null, null),
-      L = T.exports,
-      U = function () {
+      T = z,
+      L = Object(r["a"])(T, I, F, !1, null, null, null),
+      U = L.exports,
+      H = function () {
         var t = this,
           a = t.$createElement;
         t._self._c;
         return t._m(0);
       },
-      H = [
+      J = [
         function () {
           var t = this,
             a = t.$createElement,
@@ -2401,35 +2610,35 @@
           ]);
         },
       ],
-      J = {},
-      Y = Object(r["a"])(J, U, H, !1, null, null, null),
-      V = Y.exports,
-      G = {
+      Y = {},
+      V = Object(r["a"])(Y, H, J, !1, null, null, null),
+      G = V.exports,
+      K = {
         name: "Home",
         components: {
           Cabecera: _,
           About: k,
           Producto: q,
-          Noticias: B,
-          Contact: L,
-          Footer: V,
+          Noticias: R,
+          Contact: U,
+          Footer: G,
         },
       },
-      K = G,
-      Q = Object(r["a"])(K, u, m, !1, null, null, null),
-      W = Q.exports,
-      X = s("1232");
+      Q = K,
+      W = Object(r["a"])(Q, u, m, !1, null, null, null),
+      X = W.exports,
+      Z = s("1232");
     e["default"].use(g["a"]);
-    var Z = new g["a"].Store({
+    var tt = new g["a"].Store({
       state: { token: "", usuarioDB: "" },
       mutations: {
         obtenerUsuario: function (t, a) {
           (t.token = a),
             "" === a
               ? (t.usuarioDB = "")
-              : ((t.usuarioDB = Object(X["a"])(a)),
+              : ((t.usuarioDB = Object(Z["a"])(a)),
                 console.log(t.usuarioDB.data),
-                "ADMIN" == t.usuarioDB.data.role && st.push({ name: "Admin" }));
+                "ADMIN" == t.usuarioDB.data.role && et.push({ name: "Admin" }));
         },
       },
       actions: {
@@ -2441,7 +2650,7 @@
           var s = t.commit;
           s("obtenerUsuario", ""),
             localStorage.removeItem("token"),
-            st.push({ name: "Home" });
+            et.push({ name: "Home" });
         },
         leerToken: function (t) {
           var a = t.commit,
@@ -2457,36 +2666,36 @@
       modules: {},
     });
     e["default"].use(d["a"]);
-    var tt = [
-        { path: "/", name: "Home", component: W },
+    var at = [
+        { path: "/", name: "Home", component: X },
         {
           path: "/admin",
           name: "Admin",
           component: function () {
-            return s.e("chunk-4f9b49b4").then(s.bind(null, "3530"));
+            return s.e("chunk-b73ddafa").then(s.bind(null, "3530"));
           },
           meta: { requireAuth: !0 },
         },
       ],
-      at = new d["a"]({ mode: "history", base: "/", routes: tt });
-    at.beforeEach(function (t, a, s) {
+      st = new d["a"]({ mode: "history", base: "/", routes: at });
+    st.beforeEach(function (t, a, s) {
       var e = t.matched.some(function (t) {
         return t.meta.requireAuth;
       });
-      e && "" == Z.state.token ? s({ name: "Admin" }) : s();
+      e && "" == tt.state.token ? s({ name: "Admin" }) : s();
     });
-    var st = at,
-      et = s("5f5b"),
-      it = (s("f9e3"), s("2dd8"), s("bc3a")),
-      ot = s.n(it),
-      rt = s("130e");
+    var et = st,
+      it = s("5f5b"),
+      ot = (s("f9e3"), s("2dd8"), s("bc3a")),
+      rt = s.n(ot),
+      nt = s("130e");
     (e["default"].config.productionTip = !1),
-      e["default"].use(rt["a"], ot.a),
-      e["default"].use(et["a"]),
-      (ot.a.defaults.baseURL = "https://distribucion-carnicos.herokuapp.com/"),
+      e["default"].use(nt["a"], rt.a),
+      e["default"].use(it["a"]),
+      (rt.a.defaults.baseURL = "https://distribucion-carnicos.herokuapp.com/"),
       new e["default"]({
-        router: st,
-        store: Z,
+        router: et,
+        store: tt,
         render: function (t) {
           return t(c);
         },
@@ -2505,6 +2714,9 @@
   "6f42": function (t, a, s) {
     t.exports = s.p + "img/chatas2.92816c2f.jpeg";
   },
+  8672: function (t, a, s) {
+    t.exports = s.p + "img/cerdo.f20a8127.jpg";
+  },
   9324: function (t, a, s) {
     t.exports = s.p + "img/pollo.8f497e7b.jpeg";
   },
@@ -2520,6 +2732,9 @@
   },
   "9dac": function (t, a, s) {
     t.exports = s.p + "img/63.0c5f938a.jpg";
+  },
+  ad06: function (t, a, s) {
+    t.exports = s.p + "img/res2.ae62ec1a.jpg";
   },
   ad85: function (t, a, s) {
     t.exports = s.p + "img/iconctec.fef69bad.png";
@@ -2548,5 +2763,8 @@
   efe6: function (t, a, s) {
     t.exports = s.p + "img/vaca2.08edad85.png";
   },
+  f357: function (t, a, s) {
+    t.exports = s.p + "img/pollo.0db4188d.jpg";
+  },
 });
-//# sourceMappingURL=app.9970e809.js.map
+//# sourceMappingURL=app.71e2fd25.js.map
