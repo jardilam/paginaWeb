@@ -217,10 +217,8 @@
               </div>
             </div>
           </div>
-
-          <table class="table table-striped table-sm">
-            <thead class="bg-secondary fs-2 text-white">
-              Productos ingresados
+          <div class="bg-secondary fs-2 text-white col-sm-3">
+            Productos ingresados
               <b-alert
                 dismiss-label
                 :show="dismissCountDown"
@@ -231,22 +229,24 @@
               >
                 {{ mensaje.texto }}
               </b-alert>
-            </thead>
+          </div>
+
+          <table class="table table-striped table-sm py-2">
             <tbody>
               <tr>
-                <th>#</th>
-                <th>Nombre producto</th>
-                <th>Descripción</th>
-                <th>Precio por kg</th>
-                <th>Tipo de carne</th>
-                <th>Acciones</th>
+                <th class="tdEspaceOne">#</th>
+                <th class="tdEspace">Nombre producto</th>
+                <th class="tdEspace">Descripción</th>
+                <th class="tdEspace">Precio por kg</th>
+                <th class="tdEspace">Tipo de carne</th>
+                <th class="tdEspace">Acciones</th>
               </tr>
               <tr v-for="(item, index) in productos" :key="index">
-                <td>{{ index }}</td>
-                <td>{{ item.nombre }}</td>
-                <td>{{ item.descripcion }}</td>
-                <td>{{ item.precio }}</td>
-                <td>{{ item.tipoCarne }}</td>
+                <td class="tdEspaceOne">{{ index }}</td>
+                <td class="tdEspace">{{ item.nombre }}</td>
+                <td class="tdEspace">{{ item.descripcion }}</td>
+                <td class="tdEspace">{{ item.precio }}</td>
+                <td class="tdEspace">{{ item.tipoCarne }}</td>
                 <td>
                   <a
                     type="button"
@@ -267,7 +267,7 @@
             </tbody>
           </table>
         </section>
-        <!-- Fin Seccion Productos -->
+        <!-- Final Seccion Productos -->
 
         <!-- Comienzo Seccion Noticias -->     
         <div class="container-fluid text-center" id="noticias">
@@ -333,7 +333,7 @@
                           />
                         </div>
                         <div class="mb-3">
-                          <label for="resumenNoticiaP" class="form-label">Resumen (P):</label>
+                          <label for="resumenNoticiaP" class="form-label">Text Btn (P):</label>
                           <input
                             type="text"
                             class="form-control"
@@ -472,7 +472,7 @@
                           />
                         </div>    
                         <div class="mb-3">
-                          <label for="tituloNoticiaP" class="form-label">Resumen (P):</label>
+                          <label for="tituloNoticiaP" class="form-label">Text Btn (P):</label>
                           <input
                             type="text"
                             class="form-control"
@@ -585,9 +585,8 @@
               </div>    
             </div>
           </div>
-          <table class="table table-striped table-sm">
-            <thead class="bg-secondary fs-2 text-white">
-              Noticias Registradas
+          <div class="bg-secondary fs-2 text-white col-sm-3">
+            Noticias Registradas
               <b-alert
                 dismiss-label
                 :show="dismissCountDown"
@@ -598,40 +597,41 @@
               >
                 {{ mensaje.texto }}
               </b-alert>
-            </thead>
+          </div>
+          <table class="table table-striped table-hover">
             <tbody>
               <tr>
-                <th>IdP</th>
-                <th>TipoP</th>
-                <th>DatosP</th>
-                <th>ResumenP</th>
-                <th>TextBtnP</th>
-                <th>LinkBtnP</th>
-                <th>TituloM</th>
-                <th>DatosM</th>
-                <th>IntroM</th>
-                <th>ImagenM</th>
-                <th>SubtituloM</th>
-                <th>DescripcionM</th>
-                <th>Footer1M</th>
-                <th>Footer2M</th>
-                <th>Acciones</th>
+                <th class="tdEspaceOne">IdP</th>
+                <th class="tdEspace">TipoP</th>
+                <th class="tdEspace">DatosP</th>
+                <th class="tdEspace">ResumenP</th>
+                <th class="tdEspace">TextBtnP</th>
+                <th class="tdEspace">LinkBtnP</th>
+                <th class="tdEspace">TituloM</th>
+                <th class="tdEspace">DatosM</th>
+                <th class="tdEspace">IntroM</th>
+                <th class="tdEspace">ImagenM</th>
+                <th class="tdEspace">SubtituloM</th>
+                <th class="tdEspace">DescripcionM</th>
+                <th class="tdEspace">Footer1M</th>
+                <th class="tdEspace">Footer2M</th>
+                <th class="tdEspace">Acciones</th>
               </tr>
               <tr v-for="(item, index) in noticias" :key="index">
-                <td>{{ index }}</td>
-                <td>{{ item.tipoNotiPpal }}</td>             
-                <td>{{ item.dataNotiPpal }}</td>
-                <td>{{ item.resmNotiPpal }}</td>
-                <td>{{ item.textBtnNotiPpal }}</td>
-                <td>{{ item.linkBtnNotiPpal }}</td>
-                <td>{{ item.tituNotiModal }}</td>
-                <td>{{ item.dataNotiModal }}</td>
-                <td>{{ item.introNotiModal }}</td>
-                <td>{{ item.linkImgNotiModal }}</td>
-                <td>{{ item.subtNotiModal }}</td>
-                <td>{{ item.descrNotiModal }}</td>
-                <td>{{ item.foot1NotiModal }}</td>
-                <td>{{ item.foot2NotiModal }}</td>                
+                <td class="tdEspaceOne">{{ index }}</td>
+                <td class="tdEspace">{{ item.tipoNotiPpal }}</td>             
+                <td class="tdEspace">{{ item.dataNotiPpal }}</td>
+                <td class="tdEspace">{{ item.resmNotiPpal }}</td>
+                <td class="tdEspace">{{ item.textBtnNotiPpal }}</td>
+                <td class="tdEspace">{{ item.linkBtnNotiPpal }}</td>
+                <td class="tdEspace">{{ item.tituNotiModal }}</td>
+                <td class="tdEspace">{{ item.dataNotiModal }}</td>
+                <td class="tdEspace">{{ item.introNotiModal }}</td>
+                <td class="tdEspace">{{ item.linkImgNotiModal }}</td>
+                <td class="tdEspace">{{ item.subtNotiModal }}</td>
+                <td class="tdEspace">{{ item.descrNotiModal }}</td>
+                <td class="tdEspace">{{ item.foot1NotiModal }}</td>
+                <td  class="tdEspace">{{ item.foot2NotiModal }}</td>                
                 <td>
                   <a
                     type="button"
@@ -652,7 +652,7 @@
             </tbody>
           </table>
         </section>
-        <!-- Comienzo Seccion Noticias -->
+        <!-- Final Seccion Noticias -->
 
         <!-- Comienzo Seccion Usuarios -->
         <div class="container-fluid text-center" id="usuarios">
@@ -669,7 +669,7 @@
             </a>
           </h2>
         </div>
-        <section class="collapse show" id="collapseUsuarios">
+        <section class="collapse show mb-2" id="collapseUsuarios">
           <div class="container-flui mt-3">
             <div class="row">
               <div class="col">
@@ -854,10 +854,8 @@
               </div>
             </div>
           </div>
-
-          <table class="table table-striped table-sm">
-            <thead class="bg-secondary fs-2 text-white">
-              Usuarios inscritos
+          <div class="bg-secondary fs-2 text-white col-sm-3">
+            Usuarios inscritos
               <b-alert
                 dismiss-label
                 :show="dismissCountDown"
@@ -868,22 +866,24 @@
               >
                 {{ mensaje.texto }}
               </b-alert>
-            </thead>
+          </div>
+          <table class="table table-striped table-sm my-2">
+
             <tbody>
               <tr>
-                <th>#</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Email</th>
-                <th>Date</th>
-                <th>Acciones</th>
+                <th class="tdEspaceOne">#</th>
+                <th class="tdEspace">Nombre</th>
+                <th class="tdEspace">Apellido</th>
+                <th class="tdEspace">Email</th>
+                <th class="tdEspace">Date</th>
+                <th class="tdEspace">Acciones</th>
               </tr>
               <tr v-for="(item, index) in usuarios" :key="index">
-                <td>{{ index }}</td>
-                <td>{{ item.nombre }}</td>
-                <td>{{ item.apellido }}</td>
-                <td>{{ item.email }}</td>
-                <td>{{ item.date }}</td>
+                <td class="tdEspaceOne">{{ index }}</td>
+                <td class="tdEspace">{{ item.nombre }}</td>
+                <td class="tdEspace">{{ item.apellido }}</td>
+                <td class="tdEspace">{{ item.email }}</td>
+                <td class="tdEspace">{{ item.date }}</td>
                 <td>
                   <a
                     type="button"
@@ -904,16 +904,22 @@
             </tbody>
           </table>
         </section>
-        <!-- Comienzo Seccion Usuarios -->
+        <!-- Final Seccion Usuarios -->
       </main>
 
-      <footer></footer>
+      <Footer/>
+
     </div>
   </div>
 </template>
 <script>
 import { mapState, mapMutations, mapActions, mapGetters } from "vuex";
+import Footer from '../components/Footer.vue'
 export default {
+  name:"Admin",
+  components:{
+    Footer
+  },
   data() {
     return {
       mensaje: { color: "success", texto: "" },

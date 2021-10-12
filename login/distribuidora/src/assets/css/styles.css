@@ -329,6 +329,33 @@ th {
   border-width: 0;
 }
 
+.tdEspaceOne{
+  max-width: 3rem !important;
+  overflow: hidden;
+ text-overflow: ellipsis;
+ white-space: nowrap;
+}
+.tdEspaceOne:hover{
+  overflow: visible;
+  white-space: pre-line;
+}
+.tdEspace
+{
+ max-width: 5rem !important;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ white-space: nowrap;
+}
+.tdEspace:hover{
+  max-width: 20rem !important;
+  overflow: visible;
+  white-space: pre-wrap;
+  text-overflow: initial;
+  background: var(--bs-blue);
+  color: white;
+  padding-right: 1rem;
+}
+
 label {
   display: inline-block;
 }
