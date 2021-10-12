@@ -610,6 +610,12 @@ progress {
 	border: 3px solid #ff9daa;
   margin: auto;
 }
+.img-size-product{
+  max-width: 25rem !important;
+	max-height: 25rem !important;
+	border: 3px solid #ff9daa;
+  margin: auto;
+}
 .img-product-size{
   width: 90% !important;
 	height: 40rem !important;

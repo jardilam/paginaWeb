@@ -63,20 +63,20 @@
               data-bs-toggle="collapse"
               href="#collapseProductos"
               role="button"
-              aria-expanded="false"
+              aria-expanded="true"
               aria-controls="collapseProductos"
             >
               Productos
             </a>
           </h2>
         </div>
-        <section class="collapse" id="collapseProductos">
+        <section class="collapse show" id="collapseProductos">
           <div class="container-flui mt-3">
             <div class="row">
               <div class="col">
                 <div class="card mx-auto" style="width: 18rem">
                   <img
-                    src="../assets/img/chatas/user.jpg"
+                    src="../assets/img/carnes/res.jpg"
                     class="card-img-top img-thumbnail img-size"
                     alt="img-res"
                   />
@@ -219,7 +219,7 @@
           </div>
 
           <table class="table table-striped table-sm">
-            <thead class="">
+            <thead class="bg-secondary fs-2 text-white">
               Productos ingresados
               <b-alert
                 dismiss-label
@@ -269,7 +269,7 @@
         </section>
         <!-- Fin Seccion Productos -->
 
-        <!-- Comienzo Seccion Noticias -->
+        <!-- Comienzo Seccion Noticias -->     
         <div class="container-fluid text-center" id="noticias">
           <h2 class="mt-4 center">
             <a
@@ -277,202 +277,376 @@
               data-bs-toggle="collapse"
               href="#collapseNoticias"
               role="button"
-              aria-expanded="false"
+              aria-expanded="true"
               aria-controls="collapseNoticias"
             >
               Noticias
             </a>
           </h2>
-        </div>
-        <section class="collapse" id="collapseNoticias">
-          <div class="container-flui mt-3">
+        </div>        
+        <section class="collapse show" id="collapseNoticias">
+          <div class="container-flui mt-3"> 
             <div class="row">
               <div class="col">
                 <div class="card mx-auto" style="width: 18rem">
                   <img
-                    src="../assets/img/carnes/res.jpg"
+                    src="../assets/img/chatas/novedad.jpg"
                     class="card-img-top img-thumbnail img-size"
                     alt="img-res"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Res</h5>
-                    <div class="collapse" id="collapseCarne">
-                      <div class="card card-body">
-                        <form action="">
-                          <label for="nombre_producto">Nombre producto:</label>
-                          <input type="text" name="nombre_producto" />
-                          <br /><br />
-                          <label for="tipo_corte">Tipo de corte:</label>
-                          <select name="tipo_corte" id="cortes">
-                            <option value="corte1">Corte1</option>
-                            <option value="corte2">Corte2</option>
-                            <option value="corte3">Corte3</option>
-                          </select>
-                          <br /><br />
+                  />                  
+                  <div class="card-body">                    
+                    <h5 class="card-title text-center">Noticia</h5>
+                    <div class="collapse" id="collapseNoticia">
+                      <!-- Registro Noticia -->
+                      <form
+                        @submit.prevent="registrarNoticias()"
+                        method="post"
+                        v-if="!editarNoticia"
+                      >                                                                     
+                        <div class="mb-3">
+                          <label for="imgNoticiaP" class="form-label"
+                            >Link Imagen 1 (P):</label
+                          >
                           <input
-                            type="submit"
-                            value="Crear"
-                            class="btn btn-warning"
+                            type="text"
+                            class="form-control"
+                            id="imgNoticiaP"
+                            v-model="noticia.linkImgNotiPpal"
                           />
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-body bg-primary">
-                    <p>
-                      <a
-                        class="card-link"
-                        data-bs-toggle="collapse"
-                        href="#collapseCarne"
-                        role="button"
-                        aria-expanded="false"
-                        aria-controls="collapseCarne"
-                      >
-                        Crear nuevo
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="tituloNoticiaP" class="form-label">Titulo y Datos (P):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="tituloNoticiaP"
+                            v-model="noticia.dataNotiPpal"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="resumenNoticiaP" class="form-label">Resumen (P):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="resumenNoticiaP"
+                            v-model="noticia.resmNotiPpal"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="resumenNoticiaP" class="form-label">Resumen (P):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="textoBtnNoticia"
+                            v-model="noticia.textBtnNotiPpal"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="botonNoticiaP" class="form-label">Link Botón (P):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="botonNoticiaP"
+                            v-model="noticia.linkBtnNotiPpal"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="tituloNoticiaM" class="form-label">Título (M):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="tituloNoticiaM"
+                            v-model="noticia.tituNotiModal"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="dataNoticiaM" class="form-label">Datos (M):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="dataNoticiaM"
+                            v-model="noticia.dataNotiModal"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="introNoticiaM" class="form-label">Introducción (M):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="introNoticiaM"
+                            v-model="noticia.introNotiModal"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="imgNoticiaM" class="form-label">Link Imagen 2 (P):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="imgNoticiaM"
+                            v-model="noticia.linkImgNotiModal"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="subtNoticiaM" class="form-label">Subtítulo (M):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="subtNoticiaM"
+                            v-model="noticia.subtNotiModal"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="descrNoticiaM" class="form-label">Descripción (M):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="descrNoticiaM"
+                            v-model="noticia.descrNotiModal"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="foot1NoticiaM" class="form-label">Footer 1 (M):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="foot1NoticiaM"
+                            v-model="noticia.foot1NotiModal"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="foot2NoticiaM" class="form-label">Footer 2 (M):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="foot2NoticiaM"
+                            v-model="noticia.foot2NotiModal"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="tipoNoticiaP" class="form-label"
+                            >Tipo de Noticia (P):</label
+                          >
+                          <select name="tipoNoticiaP" id="tipoNoticiaP" v-model="noticia.tipoNotiPpal">
+                            <option value="Promo">Promoción del Día</option>
+                            <option value="Novedad">Novedad de la Semana</option>
+                            <option value="Receta">Receta del Día</option>
+                            <option value="Evento">Evento de la Semana</option>
+                          </select> 
+                        </div>                         
+                        <button type="submit" class="btn btn-secondary">
+                          Registrar Noticia
+                        </button>                       
+                      </form>
 
-              <div class="col">
-                <div class="card mx-auto" style="width: 18rem">
-                  <img
-                    src="../assets/img/carnes/cerdo.jpg"
-                    class="card-img-top img-thumbnail img-size"
-                    alt="img-cerdo"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Cerdo</h5>
-                    <div class="collapse" id="collapseCerdo">
-                      <div class="card card-body">
-                        <form action="">
-                          <label for="nombre_producto">Nombre producto:</label>
-                          <input type="text" name="nombre_producto" />
-                          <br /><br />
-                          <label for="tipo_corte">Tipo de corte:</label>
-                          <select name="tipo_corte" id="cortes">
-                            <option value="corte1">Corte1</option>
-                            <option value="corte2">Corte2</option>
-                            <option value="corte3">Corte3</option>
-                          </select>
-                          <br /><br />
+                      <!-- Editar Noticia -->
+                      <form
+                        @submit.prevent="editarNoticias(noticiaEditar)"
+                        method="post"
+                        v-if="editarNoticia"
+                      >
+                        <div class="mb-3">
+                          <label for="imgNoticiaP" class="form-label">Link Imagen 1 (P):</label>
                           <input
-                            type="submit"
-                            value="Crear"
-                            class="btn btn-warning"
+                            type="text"
+                            class="form-control"
+                            id="imgNoticiaPForm"
+                            v-model="noticiaEditar.linkImgNotiPpal"
                           />
-                        </form>
-                      </div>
-                    </div>
-                  </div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="tituloNoticiaP" class="form-label">Titulo y Datos (P):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="tituloNoticiaPForm"
+                            v-model="noticiaEditar.dataNotiPpal"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="tituloNoticiaP" class="form-label">Resumen (P):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="resumenNoticiaPForm"
+                            v-model="noticiaEditar.resmNotiPpal"
+                          />
+                        </div>    
+                        <div class="mb-3">
+                          <label for="tituloNoticiaP" class="form-label">Resumen (P):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="textBtnNotiPpal"
+                            v-model="noticiaEditar.textBtnNotiPpal"
+                          />
+                        </div>    
+                        <div class="mb-3">
+                          <label for="botonNoticiaP" class="form-label">Link Botón (P):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="botonNoticiaPForm"
+                            v-model="noticiaEditar.linkBtnNotiPpal"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="tituloNoticiaM" class="form-label">Título (M):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="tituloNoticiaMForm"
+                            v-model="noticiaEditar.tituNotiModal"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="dataNoticiaM" class="form-label">Datos (M):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="dataNoticiaMForm"
+                            v-model="noticiaEditar.dataNotiModal"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="introNoticiaM" class="form-label">Introducción (M):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="introNoticiaMForm"
+                            v-model="noticiaEditar.introNotiModal"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="imgNoticiaM" class="form-label">Link Imagen 2 (P):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="imgNoticiaMForm"
+                            v-model="noticiaEditar.linkImgNotiModal"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="subtNoticiaM" class="form-label">Subtítulo (M):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="subtNoticiaMForm"
+                            v-model="noticiaEditar.subtNotiModal"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="descrNoticiaM" class="form-label">Descripción (M):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="descrNoticiaMForm"
+                            v-model="noticiaEditar.descrNotiModal"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="foot1NoticiaM" class="form-label">Footer 1 (M):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="foot1NoticiaMForm"
+                            v-model="noticiaEditar.foot1NotiModal"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label for="foot2NoticiaM" class="form-label">Footer 2 (M):</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="foot2NoticiaMForm"
+                            v-model="noticiaEditar.foot2NotiModal"
+                          />
+                        </div>
+                        <button type="submit" class="btn btn-secondary">
+                          Editar
+                        </button>
+                      </form>                                          
+                    </div>                      
+                  </div> 
                   <div class="card-body bg-primary">
                     <p>
                       <a
-                        class="card-link"
+                        class="btn btn-primary"
                         data-bs-toggle="collapse"
-                        href="#collapseCerdo"
+                        href="#collapseNoticia"
                         role="button"
                         aria-expanded="false"
-                        aria-controls="collapseCerdo"
+                        aria-controls="collapseNoticia"
                       >
-                        Crear nuevo
+                        Crear Nueva
                       </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card mx-auto" style="width: 18rem">
-                  <img
-                    src="../assets/img/carnes/pollo.jpg"
-                    class="card-img-top img-thumbnail img-size"
-                    alt="img-pollo"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Pollo</h5>
-                    <div class="collapse" id="collapsePollo">
-                      <div class="card card-body">
-                        <form action="">
-                          <label for="nombre_producto">Nombre producto:</label>
-                          <input type="text" name="nombre_producto" />
-                          <br /><br />
-                          <label for="tipo_corte">Tipo de corte:</label>
-                          <select name="tipo_corte" id="cortes">
-                            <option value="corte1">Corte1</option>
-                            <option value="corte2">Corte2</option>
-                            <option value="corte3">Corte3</option>
-                          </select>
-                          <br /><br />
-                          <input
-                            type="submit"
-                            value="Crear"
-                            class="btn btn-warning"
-                          />
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-body bg-primary">
-                    <p>
-                      <a
-                        class="card-link"
-                        data-bs-toggle="collapse"
-                        href="#collapsePollo"
-                        role="button"
-                        aria-expanded="false"
-                        aria-controls="collapsePollo"
-                      >
-                        Crear nuevo
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
+                    </p>                     
+                  </div>                 
+                </div> 
+              </div>    
             </div>
           </div>
-
           <table class="table table-striped table-sm">
-            <thead class="">
-              Productos
+            <thead class="bg-secondary fs-2 text-white">
+              Noticias Registradas
+              <b-alert
+                dismiss-label
+                :show="dismissCountDown"
+                dismissible
+                :variant="mensaje.color"
+                @dismissed="dismissCountDown = 0"
+                @dismiss-count-down="countDownChanged"
+              >
+                {{ mensaje.texto }}
+              </b-alert>
             </thead>
             <tbody>
               <tr>
-                <th>Nombre producto</th>
-                <th>Corte</th>
-                <th>Precio por kg</th>
-                <th>Tipo de carne</th>
+                <th>IdP</th>
+                <th>TipoP</th>
+                <th>DatosP</th>
+                <th>ResumenP</th>
+                <th>TextBtnP</th>
+                <th>LinkBtnP</th>
+                <th>TituloM</th>
+                <th>DatosM</th>
+                <th>IntroM</th>
+                <th>ImagenM</th>
+                <th>SubtituloM</th>
+                <th>DescripcionM</th>
+                <th>Footer1M</th>
+                <th>Footer2M</th>
                 <th>Acciones</th>
               </tr>
-              <tr>
-                <td>Pechuga</td>
-                <td>Entero</td>
-                <td>7500</td>
-                <td>Pollo</td>
+              <tr v-for="(item, index) in noticias" :key="index">
+                <td>{{ index }}</td>
+                <td>{{ item.tipoNotiPpal }}</td>             
+                <td>{{ item.dataNotiPpal }}</td>
+                <td>{{ item.resmNotiPpal }}</td>
+                <td>{{ item.textBtnNotiPpal }}</td>
+                <td>{{ item.linkBtnNotiPpal }}</td>
+                <td>{{ item.tituNotiModal }}</td>
+                <td>{{ item.dataNotiModal }}</td>
+                <td>{{ item.introNotiModal }}</td>
+                <td>{{ item.linkImgNotiModal }}</td>
+                <td>{{ item.subtNotiModal }}</td>
+                <td>{{ item.descrNotiModal }}</td>
+                <td>{{ item.foot1NotiModal }}</td>
+                <td>{{ item.foot2NotiModal }}</td>                
                 <td>
-                  <a type="button" class="btn btn-primary" href="">Editar</a>|
-                  <a type="button" class="btn btn-danger" href="">Eliminar</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Cuadril</td>
-                <td>magro</td>
-                <td>10500</td>
-                <td>Res</td>
-                <td>
-                  <a type="button" class="btn btn-primary" href="">Editar</a>|
-                  <a type="button" class="btn btn-danger" href="">Eliminar</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Tocino</td>
-                <td>papada</td>
-                <td>5600</td>
-                <td>Pollo</td>
-                <td>
-                  <a type="button" class="btn btn-primary" href="">Editar</a>|
-                  <a type="button" class="btn btn-danger" href="">Eliminar</a>
+                  <a
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="collapse"
+                    href="#collapseNoticia"
+                    @click="activarEdicionNoticia(item._id)"
+                    >Editar</a
+                  >|
+                  <a
+                    type="button"
+                    class="btn btn-danger"
+                    @click="eliminarNoticia(item._id)"
+                    >Eliminar</a
+                  >
                 </td>
               </tr>
             </tbody>
@@ -488,14 +662,14 @@
               data-bs-toggle="collapse"
               href="#collapseUsuarios"
               role="button"
-              aria-expanded="false"
+              aria-expanded="true"
               aria-controls="collapseUsuarios"
             >
               Usuarios
             </a>
           </h2>
         </div>
-        <section class="collapse" id="collapseUsuarios">
+        <section class="collapse show" id="collapseUsuarios">
           <div class="container-flui mt-3">
             <div class="row">
               <div class="col">
@@ -682,7 +856,7 @@
           </div>
 
           <table class="table table-striped table-sm">
-            <thead class="bg-primary">
+            <thead class="bg-secondary fs-2 text-white">
               Usuarios inscritos
               <b-alert
                 dismiss-label
@@ -747,6 +921,7 @@ export default {
       dismissCountDown: 0,
       usuarios: [],
       productos: [],
+      noticias: [],
       usuario: {
         nombre: "",
         apellido: "",
@@ -761,10 +936,28 @@ export default {
         precio: "",
         tipoCarne: "",
       },
+      noticia: {
+        tipoNotiPpal: "",
+        linkImgNotiPpal: "",
+        dataNotiPpal: "",
+        resmNotiPpal: "",
+        textBtnNotiPpal: "",
+        linkBtnNotiPpal: "",
+        tituNotiModal: "",
+        dataNotiModal: "",
+        introNotiModal: "",
+        subtNotiModal: "",
+        descrNotiModal: "",
+        foot1NotiModal: "",
+        foot2NotiModal: "",     
+        linkImgNotiModal: ""
+      },
       editar: false,
       editarProducto:false,
+      editarNoticia:false,
       usuarioEditar: {},
       productoEditar: {},
+      noticiaEditar: {},
     };
   },
   computed: {
@@ -799,6 +992,17 @@ export default {
         .then((res) => {
           console.log(res.data);
           this.productos = res.data;
+        })
+        .catch((e) => {
+          console.log(e.response);
+        });
+    },
+    listarNoticias() {
+      this.axios
+        .get("/noticia/noticia")
+        .then((res) => {
+          console.log(res.data);
+          this.noticias = res.data;
         })
         .catch((e) => {
           console.log(e.response);
@@ -863,6 +1067,46 @@ export default {
           this.showAlert();
         });
     },
+    registrarNoticias() {
+      let config = {
+        headers: {
+          token: this.token,
+        },
+      };
+      this.axios
+        .post("/noticia/nueva-noticia", this.noticia, config)
+        .then((res) => {
+          this.noticias.push(res.data);
+          this.noticia.tipoNotiPpal = "";
+          this.noticia.linkImgNotiPpal = "";
+          this.noticia.dataNotiPpal = "";
+          this.noticia.resmNotiPpal$ = "";
+          this.noticia.textBtnNotiPpal = "";
+          this.noticia.linkBtnNotiPpal = "";
+          this.noticia.tituNotiModal = "";
+          this.noticia.dataNotiModal = "";
+          this.noticia.introNotiModal = "";
+          this.noticia.subtNotiModal = "";                    
+          this.noticia.descrNotiModal = "";
+          this.noticia.foot1NotiModal = "";
+          this.noticia.foot2NotiModal = "";          
+          this.noticia.linkImgNotiModal = "";
+
+          this.mensaje.color = "success";
+          this.mensaje.texto = "Registro exitoso";
+          this.showAlert();
+        })
+        .catch((e) => {
+          console.log(e.response);
+          if (e.response.data.error.errors.nombre.message) {
+            this.mensaje.texto = e.response.data.error.errors.name.message;
+          } else {
+            this.mensaje.texto = "Error del sistema";
+          }
+          this.mensaje.color = "danger";
+          this.showAlert();
+        });
+    },
     /* FIN --- REGISTRAR OBJETOS */
 
     /* INICIO --- ELIMINAR LOS OBJETOS POR ID */
@@ -909,6 +1153,28 @@ export default {
           console.log(e.response);
         });
     },
+    eliminarNoticia(id) {
+      let config = {
+        headers: {
+          token: this.token,
+        },
+      };
+      this.axios
+        .delete(`noticia/noticia/${id}`, config)
+        .then((res) => {
+          const index = this.noticias.findIndex(
+            (item) => item._id === res.data._id
+          );
+          this.noticias.splice(index, 1);
+
+          this.mensaje.color = "danger";
+          this.mensaje.texto = "Noticia Eliminada";
+          this.showAlert();
+        })
+        .catch((e) => {
+          console.log(e.response);
+        });
+    },
     /* FIN --- ELIMINAR LOS OBJETOS POR ID */
 
     /* INICIO --- ACTIVAR EDICION FORMS */
@@ -934,6 +1200,17 @@ export default {
         .get(`producto/producto/${id}`)
         .then((res) => {
           this.productoEditar = res.data;
+        })
+        .catch((e) => {
+          console.log(e.response);
+        });
+    },
+    activarEdicionNoticia(id) {
+      this.editarNoticia = true;
+      this.axios
+        .get(`noticia/noticia/${id}`)
+        .then((res) => {
+          this.noticiaEditar = res.data;
         })
         .catch((e) => {
           console.log(e.response);
@@ -992,6 +1269,41 @@ export default {
           console.log(e.response);
         });
     },
+    editarNoticias(item) {
+      console.log(item);
+      let config = {
+        headers: {
+          token: this.token,
+        },
+      };
+      this.axios
+        .put(`noticia/noticia/${item._id}`, item, config)
+        .then((res) => {
+          const index = this.noticias.findIndex((n) => n._id === res.data._id);
+          this.noticias[index].tipoNotiPpal = res.data.tipoNotiPpal;
+          this.noticias[index].linkImgNotiPpal = res.data.linkImgNotiPpal;          
+          this.noticias[index].dataNotiPpal = res.data.dataNotiPpal; 
+          this.noticias[index].resmNotiPpal = res.data.resmNotiPpal; 
+          this.noticias[index].textBtnNotiPpal = res.data.textBtnNotiPpal; 
+          this.noticias[index].linkBtnNotiPpal = res.data.linkBtnNotiPpal; 
+          this.noticias[index].tituNotiModal = res.data.tituNotiModal; 
+          this.noticias[index].dataNotiModal = res.data.dataNotiModal; 
+          this.noticias[index].introNotiModal = res.data.introNotiModal; 
+          this.noticias[index].subtNotiModal = res.data.subtNotiModal; 
+          this.noticias[index].descrNotiModal = res.data.descrNotiModal; 
+          this.noticias[index].foot1NotiModal = res.data.foot1NotiModal; 
+          this.noticias[index].foot2NotiModal = res.data.foot2NotiModal; 
+          this.noticias[index].linkImgNotiModal = res.data.linkImgNotiModal; 
+
+          this.mensaje.color = "success";
+          this.mensaje.texto = "Noticia Editada";
+          this.showAlert();
+          this.editarNoticia = false;
+        })
+        .catch((e) => {
+          console.log(e.response);
+        });
+    },
     /* FIN --- EDITAR LOS OBJETOS POR ID */
 
     /* CONTEXTO PARA CALENDARIO */
@@ -1013,6 +1325,7 @@ export default {
     this.leerToken();
     this.listarUsuarios();
     this.listarProductos();
+    this.listarNoticias();
   },
 };
 </script>

@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 let verificarAuth = (req, res, next) => {
   // Leer headers
   let token = req.get("token");
-  console.log(token);
+  //console.log(token);
   jwt.verify(token, "secret", (err, decoded) => {
     if (err) {
       return res.status(401).json({
@@ -21,7 +21,7 @@ let verificarAuth = (req, res, next) => {
 let verificaRol = (req, res, next) => {
   let rol = req.usuario.role;
 
-  console.log(rol);
+  //console.log(rol);
 
   if (rol !== "ADMIN") {
     return res.status(401).json({
